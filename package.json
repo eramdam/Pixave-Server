@@ -1,0 +1,23 @@
+{
+  "name": "pixave-server",
+  "version": "1.0.0",
+  "description": "A little NodeJS server that can fetch and serve images stored in a Pixave.app database",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eramdam/Pixave-Server.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/eramdam/Pixave-Server/issues"
+  },
+  "homepage": "https://github.com/eramdam/Pixave-Server#readme",
+  "dependencies": {
+    "express": "^4.14.1",
+    "sqlite3": "^3.1.8"
+  }
+}
