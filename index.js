@@ -1,10 +1,18 @@
+const path = require('path')
+const config = require('config')
+
+if (config.path === '**REQUIRED**') {
+  console.log('Please config the path of the Pixave.pxvlibrary in your config file first');
+  process.exit(1);
+}
+
+const dbPath = path.resolve(config.path, 'Pixave.pxvlibrary/');
+
 const pixave = require('./pixave.js');
 const express = require('express')
 const app = express()
-const path = require('path')
 
 app.get('/', (req, res) => {
-  console.log(path.resolve(__dirname, '../Pixave.pxvlibrary/Masters'));
   res.send('Hello world')
 })
 
@@ -19,7 +27,7 @@ app.get('/:filename', (req, res) => {
 
     const finalPath = rows[0].ZMEDIAPATH;
     const opts = {
-      root: path.resolve(__dirname, '../Pixave.pxvlibrary/Masters'),
+      root: path.resolve(dbPath, 'Masters'),
       headers: {
         'x-sent': true,
         'x-timestamp': Date.now()
