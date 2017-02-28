@@ -4,7 +4,7 @@
   "description": "A little NodeJS server that can fetch and serve images stored in a Pixave.app database",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "export NODE_ENV=dev && node index"
   },
   "repository": {
     "type": "git",
