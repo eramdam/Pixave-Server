@@ -1,3 +1,4 @@
 module.exports = {
-  path: '**REQUIRED**'
+  path: '**REQUIRED**',
+  port: 9999
 }

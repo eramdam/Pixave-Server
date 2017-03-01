@@ -46,6 +46,6 @@ app.get('/:filename', (req, res) => {
   })
 })
 
-app.listen(4242, () => {
-  console.log('listening on 4242');
+app.listen(config.port, () => {
+  console.log(`listening on ${config.port}`);
 })
