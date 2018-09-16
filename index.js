@@ -30,7 +30,8 @@ app.get('/:filename', (req, res) => {
       root: path.resolve(dbPath, 'Masters'),
       headers: {
         'x-sent': true,
-        'x-timestamp': Date.now()
+        'x-timestamp': Date.now(),
+        'Access-Control-Allow-Origin': '*'
       }
     }
     
